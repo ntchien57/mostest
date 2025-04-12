@@ -1,0 +1,42 @@
+.related-news {
+    margin-top: 20px;
+    .title {
+        h3 {
+            color: #2e942b;
+            font-family: "SFUFuturabold", sans-serif;
+            text-transform: uppercase;
+            font-size: 19px;
+        }
+    }
+    .related-news-list {
+        &-item {
+            &-thumb {
+                img {
+                    max-width: 100%;
+                    width: 100%;
+                    transform: translateZ(0);
+                    margin: 0 auto;
+                    height: 180px;
+                    border-radius: 6px;
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+            &-content {
+                a {
+                    height: 60px;
+                    overflow: hidden;
+                    font-size: 16px;
+                    font-weight: 500;
+                    color: #000;
+                    margin-top: 7px;
+                    line-height: 20px;
+                    text-decoration: none;
+                    &:hover {
+                        color: #2e942b;
+                    }
+                }
+            }
+        }
+    }
+}

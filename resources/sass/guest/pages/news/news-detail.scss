@@ -1,0 +1,102 @@
+@import "../../base/mixins/breakpoints";
+@import "../../components/news-side-list";
+@import "../../components/product-side-list";
+@import "../../components/related-news";
+
+.news-detail-page {
+    background: white;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    .breadcrum {
+    }
+
+    .title {
+        h1 {
+            margin-bottom: 7px;
+            font-weight: 500;
+            color: #61a63c;
+            font-size: 24px;
+        }
+    }
+
+    .info {
+        p {
+            font-size: 14px;
+            span {
+                color: #2e942b;
+            }
+        }
+    }
+
+    .description {
+        p {
+            margin-top: 0;
+            margin-bottom: 1.3em;
+        }
+    }
+
+    .content {
+        .realated-news {
+            ul {
+                background: #f7f7f7;
+                padding: 10px 30px;
+                border-radius: 5px;
+                list-style: square;
+                li {
+                    font-size: 15px;
+                    margin-bottom: 5px;
+                    a {
+                        color: #2e942b;
+                        text-transform: none;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .description {
+        p {
+        }
+    }
+
+    .description {
+    }
+
+    .news-list {
+        .news-item {
+            .thumb {
+                img {
+                    border-radius: 10px;
+                    max-width: 100%;
+                    width: 100%;
+                    transform: translateZ(0);
+                    margin: 0 auto;
+                }
+            }
+            .box-text-right {
+                padding-left: 1.5em;
+                padding-right: 1.5em;
+                .title a {
+                    text-decoration: none;
+                }
+                .description {
+                    p {
+                        font-size: 0.9em;
+                    }
+                }
+            }
+        }
+    }
+    .intro-img {
+        img {
+            max-width: 100%;
+        }
+    }
+
+    .category-name {
+        border-top: 1px solid #ececec;
+        border-bottom: 2px solid #ececec;
+        padding: 0.5em 0 0.6em;
+    }
+}

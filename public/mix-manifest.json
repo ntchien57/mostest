@@ -1,0 +1,17 @@
+{
+    "/js/app.js": "/js/app.js",
+    "/css/app.css": "/css/app.css",
+    "/css/guest/style.bundle.css": "/css/guest/style.bundle.css",
+    "/css/guest/cart/checkout.css": "/css/guest/cart/checkout.css",
+    "/css/guest/cart/list.css": "/css/guest/cart/list.css",
+    "/css/guest/contact/contact.css": "/css/guest/contact/contact.css",
+    "/css/guest/home/home.css": "/css/guest/home/home.css",
+    "/css/guest/introduction/introduction.css": "/css/guest/introduction/introduction.css",
+    "/css/guest/news/news-detail.css": "/css/guest/news/news-detail.css",
+    "/css/guest/news/news.css": "/css/guest/news/news.css",
+    "/css/guest/other/success.css": "/css/guest/other/success.css",
+    "/css/guest/product/detail.css": "/css/guest/product/detail.css",
+    "/css/guest/product/list-by-category.css": "/css/guest/product/list-by-category.css",
+    "/js/guest/scripts.bundle.js": "/js/guest/scripts.bundle.js",
+    "/js/config.js": "/js/config.js"
+}

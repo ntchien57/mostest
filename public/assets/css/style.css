@@ -1,0 +1,84 @@
+@font-face {
+    font-family: font1;
+    src: url("../../font/SF-UI-Display-Regular.otf");
+}
+
+@font-face {
+    font-family: font2;
+    src: url("../../font/SF-UI-Display-Bold.otf");
+}
+
+.icon {
+    background-repeat: no-repeat;
+    cursor: pointer;
+    position: relative;
+    /* margin: auto 0; */
+    /* display: inline-flex;
+    vertical-align: middle; */
+}
+
+.icon.icon-big {
+    background: url(../../images/icon-big.png);
+}
+
+.icon.icon-cloud {
+    width: 50px;
+    height: 50px;
+    background-position-x: 168px;
+    background-position-y: 0;
+}
+
+.icon.icon-approved,
+.icon.icon-ui {
+    width: 50px;
+    height: 50px;
+    background-position-x: 0;
+}
+
+.icon.icon-ui {
+    background-position-y: 48px;
+}
+
+.icon.icon-approved,
+.icon.icon-code {
+    background-position-y: 0;
+}
+
+.icon.icon-approved,
+.icon.icon-ui {
+    width: 50px;
+    height: 50px;
+    background-position-x: 0;
+}
+
+.icon.icon-code {
+    width: 50px;
+    height: 50px;
+    background-position-x: 108px;
+}
+
+.icon.icon-approved,
+.icon.icon-code {
+    background-position-y: 0;
+}
+
+.about-content .about-item {
+    padding: 10px 20px;
+    display: flex;
+    margin: auto;
+    width: 80%;
+}
+
+.about-content .about-item span {
+    max-width: calc(100% - 70px);
+    margin: auto;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+@media (min-width: 768px) {
+    .about-content .about-item {
+        width: 100%;
+    }
+}
