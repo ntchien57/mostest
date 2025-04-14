@@ -16,7 +16,6 @@ class HocSinhController extends Controller
 {
     use ModelForm;
     public $gt = ['0' => 'Nam', '1' => 'Nữ'];
-    public $loai = ['0' => 'Kế toán', '1' => 'Tuyển sinh'];
     /**
      * Index interface.
      *
@@ -75,7 +74,6 @@ class HocSinhController extends Controller
 
 
         $gt = $this->gt;
-        $loai = $this->loai;
         $grid->maHS('Mã học sinh');
         $grid->tenHS('Tên học sinh');
         $grid->diachi('Địa chỉ');
@@ -117,6 +115,11 @@ class HocSinhController extends Controller
             $form->text('cmnd', 'CMND')->required();
             $form->text('tendangnhap', 'Tên đăng nhập')->required();
             $form->password('matkhau', 'Mật khẩu')->required();
+            $form->saving(function (Form $form) {
+                if ($form->matkhau) {
+                    $form->matkhau = bcrypt($form->matkhau);
+                }
+            });
             $form->disableViewCheck();
             $form->disableEditingCheck();
             $form->disableCreatingCheck();
