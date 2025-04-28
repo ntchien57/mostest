@@ -1,6 +1,5 @@
 <?php
 
-use App\Models\PhongHoc;
 use Illuminate\Routing\Router;
 
 Admin::registerAuthRoutes();
@@ -17,6 +16,9 @@ Route::group([
     $router->resource('giao_vien', GiaoVienController::class);
     $router->resource('phong_hoc', PhongHocController::class);
     $router->resource('hoc_sinh', HocSinhController::class);
+    $router->resource('lien_he', LienHeController::class);
+    $router->resource('khoa_hoc', KhoaHocController::class);
+    $router->resource('lop_hoc', LopHocController::class);
     $router->get('/ckfinder', function () {
         return view('admin.ckfinder');
     });

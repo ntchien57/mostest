@@ -33,7 +33,6 @@
 <link rel="stylesheet" id="css-main" href="{{ asset('assets/css/dashmix.css') }}">
 
     <link rel="stylesheet" id="css-main" href="{{ asset('assets/css/custom.css') }}">
-    <script src="{{ asset('js/jquery.min.js') }}"></script>
 </head>
 
 <body>
@@ -65,6 +64,12 @@
                             </li>';
                         }
                         ?>
+
+                        <li class="nav-main-item">
+                            <a class="btn btn-hero btn-primary rounded-pill" href="#" data-bs-toggle="modal" data-bs-target="#contactModal">
+                                <i class="fa fa-envelope me-2"></i> Liên hệ
+                            </a>                            
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -179,12 +184,86 @@
         <!-- END Footer -->
     </div>
     <!-- END Page Container -->
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content shadow-lg border-0">
+            <div class="modal-header bg-primary text-white">
+              <h5 class="modal-title" id="contactModalLabel"><i class="fa fa-envelope me-2"></i>Liên hệ với chúng tôi</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Đóng"></button>
+            </div>
+            <div class="modal-body p-4">
+              <form method="POST" action="{{ route('contact') }}">
+                @csrf
+                <div class="row g-3">
+                  <div class="col-md-12">
+                    <label class="form-label">Họ tên</label>
+                    <input name="hoten" type="text" class="form-control" placeholder="Nhập họ tên của bạn" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-control" placeholder="you@example.com" name="email" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Số điện thoại</label>
+                    <input type="tel" class="form-control" placeholder="0123 456 789" name="sdt" required>
+                  </div>
+                  <div class="col-md-12">
+                    <label class="form-label">Ý kiến / Tin nhắn</label>
+                    <textarea class="form-control" rows="4" placeholder="Nội dung bạn muốn gửi..." name="ykien" required></textarea>
+                  </div>
+                </div>
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+              <button type="submit" class="btn btn-primary">
+                <i class="fa fa-paper-plane me-1"></i> Gửi phản hồi
+              </button>
+            </div>
+        </form>
 
+          </div>
+        </div>
+      </div>
+      
     <!-- END Page Container -->
 <!-- Dashmix App (nếu có trên CDN riêng, thay thế bằng link bên dưới nếu bạn có host CDN riêng) -->
 <script src="{{ asset('js/dashmix.app.min.js') }}"></script>\
 <script src="{{ asset('slick/slick.js') }}"></script>
+<script src="{{ asset('js/jquery.min.js') }}"></script>
 
+<script>
+    let $ = jQuery;
+    $(document).ready(function() {
+        $(window).on('load', function() {
+            $.getScript("https://cdn.jsdelivr.net/npm/sweetalert2@10.13.0/dist/sweetalert2.all.min.js",
+                function() {
+
+                    @if (Session::has('success'))
+                        Swal.fire({
+                            text: "{{ session('success') }}",
+                            icon: "success",
+                            // buttonsStyling: false,
+                            confirmButtonText: "Đồng ý",
+                            customClass: {
+                                confirmButton: "btn font-weight-bold btn-light-primary"
+                            }
+                        })
+                    @endif
+                    @if (Session::has('error'))
+                        Swal.fire({
+                            text: "{{ session('error') }}",
+                            icon: "error",
+                            // buttonsStyling: false,
+                            confirmButtonText: "Đồng ý",
+                            customClass: {
+                                confirmButton: "btn font-weight-bold btn-light-primary"
+                            }
+                        })
+                    @endif
+                });
+        })
+    });
+</script>
 
 </body>
 

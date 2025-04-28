@@ -11,6 +11,7 @@ class HomeController extends Controller
     public function index()
     {
         Admin::js(asset('vendor/chartjs/dist/Chart.bundle.min.js'));
+        // Admin::js(asset('js/jquery.min.js'));
         Admin::css(asset('slick/slick.css'));
         Admin::css(asset('slick/slick-theme.css'));
         Admin::js(asset('slick/slick.min.js'));

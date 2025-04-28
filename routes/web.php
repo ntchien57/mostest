@@ -13,3 +13,4 @@
 
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/dang-nhap', 'HomeController@login')->name('login');
+Route::post('/lien-he', 'HomeController@contact')->name('contact');
