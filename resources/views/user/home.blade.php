@@ -52,7 +52,7 @@
                         <?php 
                         if(!isset($_COOKIE['token'])) {
                             echo '<li class="nav-main-item">
-                                <a class="btn btn-hero btn-light rounded-pill" href="admin">
+                                <a class="btn btn-hero btn-light rounded-pill" href="dang-nhap">
                                     <i class="fa fa-right-to-bracket me-2"></i>Đăng nhập
                                 </a>
                             </li>';
@@ -78,37 +78,68 @@
         <!-- Main Container -->
         <main id="main-container">
             <!-- Hero -->
-            <div class="hero bg-body-extra-light hero-bubbles hero-lg overflow-hidden">
+            <div class="pt-5 mt-3">
+                <img class="img-fluid animated flipInX" src="{{ asset('images/banner.png') }}" alt="">
+            </div>
+
+            <div class="hero bg-body-extra-light hero-bubbles overflow-hidden" style="min-height:1000px">
                 <div class="hero-inner">
-                    <span class="hero-bubble hero-bubble-lg bg-warning" style="top: 20%; left: 10%;"></span>
-                    <span class="hero-bubble bg-success" style="top: 20%; left: 80%;"></span>
-                    <span class="hero-bubble hero-bubble-sm bg-xwork" style="top: 40%; left: 25%;"></span>
-                    <span class="hero-bubble hero-bubble-lg bg-xmodern" style="top: 10%; left: 20%;"></span>
-                    <span class="hero-bubble hero-bubble-lg bg-xeco" style="top: 30%; left: 90%;"></span>
-                    <span class="hero-bubble hero-bubble-lg bg-danger" style="top: 35%; left: 20%;"></span>
-                    <span class="hero-bubble hero-bubble-lg bg-warning" style="top: 60%; left: 35%;"></span>
-                    <span class="hero-bubble bg-info" style="top: 60%; left: 80%;"></span>
-                    <span class="hero-bubble hero-bubble-lg bg-xdream" style="top: 75%; left: 70%;"></span>
-                    <span class="hero-bubble hero-bubble-lg bg-xpro" style="top: 75%; left: 10%;"></span>
-                    <span class="hero-bubble bg-xplay" style="top: 90%; left: 90%;"></span>
                     <div class="position-relative d-flex align-items-center">
                         <div class="content content-full">
-                            <div class="row g-6 w-100 py-7 overflow-hidden">
+                            <div class="row g-6 w-100 py-4 overflow-hidden">
                                 <div
-                                    class="col-md-7 order-md-last py-4 d-md-flex align-items-md-center justify-content-md-end">
-                                    <img class="img-fluid animated flipInX" src="{{ asset('images/home.png') }}"
+                                    class="col-md-4 order-md-last py-4 d-md-flex align-items-md-center justify-content-md-end">
+                                    <img class="img-fluid animated flipInX" src="{{ asset('images/gioithieu.png') }}"
                                         alt="Hero Promo">
                                 </div>
-                                <div class="col-md-5 py-4 d-flex align-items-center" data-toggle="appear"
+                                <div class="col-md-8 py-4 d-flex align-items-center" data-toggle="appear"
                                     data-class="animated fadeInLeft">
                                     <div class="text-center text-md-start">
                                         <h1 class="fw-bold fs-2 mb-3">
-                                            Hệ thống thi và tạo đề thi trắc nghiệm online tốt nhất.
+                                            Công ty TNHH Đầu tư và phát triển giáo dục quốc tế Success (Edusuccess) – Tăng tốc tới tương lai
                                         </h1>
                                         <p class="text-muted fw-medium mb-4">
-                                        MOS (Microsoft Office Specialist) là bài thi về kỹ năng Tin học Văn phòng được triển khai bởi Tập đoàn khảo thí Tin học hàng đầu thế giới – Certiport (Hoa Kỳ) và đang được áp dụng trên 150 quốc gia và vùng lãnh thổ trên thế giới. Bài thi MOS được thực hiện trực tuyến trên 27 ngôn ngữ và đã được Việt hóa, với trung bình 280.000 bài thi mỗi tháng được tổ chức thông qua hơn 12.000 trung tâm được ủy quyền chính thức của Certiport.
+                                            Là một tổ chức giáo dục ra đời giữa cao trào của cuộc công nghiệp 4.0 đòi hỏi nguồn nhân lực chất lượng cao với sứ mệnh trang bị cho học sinh, sinh viên tri thức về công nghệ thông tin, trình độ ngoại ngữ tốt, kỹ năng mềm thành thạo và kỹ năng thực hành và ứng dụng thực tiễn để mở ra cánh cửa bước vào sân chơi toàn cầu hóa.
+                                            <br>
+ 
+
+                                            <span class="fw-bold">Các lĩnh vực hoạt động của Edusuccess:</span> <br>
+                                            
+                                            1. Đào tạo ngoại ngữ: <br>
+                                            - Luyện thi chứng chỉ quốc tế IELTS, TOEIC, TOEFL… <br>
+                                            
+                                            - Khóa tiếng Anh cơ bản – nâng cao, tiếng Anh giao tiếp, tiếng Anh cho người mất gốc. <br>
+                                            
+                                            2. Đào tạo tin học:<br>
+                                            - Luyện thi chứng chỉ tin học quốc tế MOS, IC3, IC3 SPARK;<br>
+                                            
+                                            - Khóa Tin học ngắn hạn;<br>
+                                            
+                                            - Khóa Tin học nâng cao cho doanh nghiệp.<br>
+                                            
+                                            3. Tổ chức các bài thi quốc tế:<br>
+                                            - Hệ thống bài thi ngoại ngữ: TOEFL (bao gồm TOEFL Primary, TOEFL Junior, TOEFL iBT, TOEFL ITP) & TOEIC.<br>
+                                            
+                                            - Hệ thống bài thi tin học: MOS, IC3, IC3 SPARK.<br>
+                                            
+                                            - Bài thi khác: SAT…<br>
+                                            
+                                            4. Giáo dục STEAM<br>
+                                            - Lớp học Trải nghiệm phương pháp Giáo dục STEAM các cấp. <br>
+                                            
+                                            - Luyện thi các cuộc thi lớn của LEGO Education là FLL; ROBOTACON WRO (Bảng B – WRO) cấp Quốc gia và WRO cấp Quốc tế.<br>
+                                            
+                                            - Tổ chức các CLB Stem & Robotics tại các trường phổ thông.<br>
+                                            
+                                             
+                                            
+                                            Những nét nổi bật của Edusuccess:<br>
+                                            
+                                            Là đối tác của các tổ chức quốc tế uy tín<br>
+                                            
+                                            Với việc đáp ứng tốt nhất các yêu cầu nghiêm ngặt dành cho các đối tác, Edusucess được công nhận và chính thức trở thành đối tác của nhiều tổ chức quốc tế uy tín.<br>
                                         </p>
-                                        <a class="btn btn-alt-primary py-2 px-3 m-1" href="auth/signin" target="_blank">
+                                        <a class="btn btn-alt-primary py-2 px-3 m-1">
                                             <i class="fa fa-arrow-right opacity-50 me-1"></i> Tham gia ngay
                                         </a>
                                         <a class="btn btn-alt-secondary py-2 px-3 m-1 btn--scroll-to">
@@ -152,21 +183,13 @@
                     <div class="col-md-4">
                         <h3 class="fw-semibold">Địa chỉ</h3>
                         <div class="fs-sm push">
-                            ABC<br>
-                            Hà Nội<br>
+                            Số 33, Nguyễn Đức Cảnh, P. An Biên, Q. Lê Chân, Tp. Hải Phòng
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <h3 class="fw-semibold">Kết nối</h3>
+                        <h3 class="fw-semibold">Bản đồ</h3>
                         <ul class="list list-simple-mini">
-                            <li>
-                                <a class="fw-semibold" href="#">
-                                    <i class="fab fa-1x fa-facebook-f me-2 text-dark"></i>
-                                </a>
-                                <a class="fw-semibold" href="#">
-                                    <i class="fab fa-1x fa-facebook-messenger text-dark"></i>
-                                </a>
-                            </li>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.2434423717145!2d106.67607937488353!3d20.855330693713423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314a7a8afc82698b%3A0x9cb25db8c0b4a8e0!2zVHJ1bmcgdMOibSBHRFRYIEjhuqNpIFBow7JuZw!5e1!3m2!1svi!2s!4v1745896138262!5m2!1svi!2s" width="500" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </ul>
                     </div>
                 </div>
@@ -227,7 +250,7 @@
       
     <!-- END Page Container -->
 <!-- Dashmix App (nếu có trên CDN riêng, thay thế bằng link bên dưới nếu bạn có host CDN riêng) -->
-<script src="{{ asset('js/dashmix.app.min.js') }}"></script>\
+<script src="{{ asset('js/dashmix.app.min.js') }}"></script>
 <script src="{{ asset('slick/slick.js') }}"></script>
 <script src="{{ asset('js/jquery.min.js') }}"></script>
 

@@ -11,6 +11,7 @@ use Encore\Admin\Grid;
 use Encore\Admin\Layout\Content;
 use Encore\Admin\Show;
 use App\Models\LinhVuc;
+use App\Models\TaiKhoan;
 
 class HocSinhController extends Controller
 {
@@ -113,13 +114,6 @@ class HocSinhController extends Controller
             $form->text('sdt', 'Số điện thoại')->required();
             $form->radio('gioitinh', 'Giới tính')->options(['0' => 'Nam', '1' => 'Nữ'])->default('0');
             $form->text('cmnd', 'CMND')->required();
-            $form->text('tendangnhap', 'Tên đăng nhập')->required();
-            $form->password('matkhau', 'Mật khẩu')->required();
-            $form->saving(function (Form $form) {
-                if ($form->matkhau) {
-                    $form->matkhau = bcrypt($form->matkhau);
-                }
-            });
             $form->disableViewCheck();
             $form->disableEditingCheck();
             $form->disableCreatingCheck();

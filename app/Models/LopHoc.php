@@ -10,17 +10,22 @@ class LopHoc extends Model
     public $table = 'lophoc';
 
     public function giaoVien()
-{
-    return $this->belongsTo(GiaoVien::class, 'maGV', 'maGV');
-}
+    {
+        return $this->belongsTo(GiaoVien::class, 'maGV', 'maGV');
+    }
 
-public function khoaHoc()
-{
-    return $this->belongsTo(KhoaHoc::class, 'maKH', 'maKH');
-}
+    public function khoaHoc()
+    {
+        return $this->belongsTo(KhoaHoc::class, 'maKH', 'maKH');
+    }
 
-public function phongHoc()
-{
-    return $this->belongsTo(PhongHoc::class, 'maPH', 'maPH');
-}
+    public function phongHoc()
+    {
+        return $this->belongsTo(PhongHoc::class, 'maPH', 'maPH');
+    }
+    public function chiTietLopHoc()
+    {
+        return $this->hasMany(ChiTietLopHoc::class, 'maLH', 'maLH');
+    }
+
 }
